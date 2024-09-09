@@ -1,0 +1,48 @@
+#container {
+    height: 500px;
+    width: 26vw;
+    background-color: rgb(255, 255, 255);
+    border: solid;
+    border-radius: 5px;
+    margin-left: 540px;
+}
+
+#idPoke {
+    display: flex;
+    background-color: rgba(82, 82, 82, 0.37);
+}
+
+#pokestats {
+    display: flex;
+    margin-top: 20px;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#altura {
+    background-color: rgba(82, 82, 82, 0.37);
+    border-radius: 10px;
+    width: 25vw;
+}
+
+#peso {
+    margin-top: 30px;
+    background-color: rgba(82, 82, 82, 0.37);
+    border-radius: 10px;
+    width: 25vw;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20px, 1fr));
+    margin-top: 70px;
+    gap: 5px;
+    width: 100%;
+}
+
+.square {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(82, 82, 82, 0.37);
+}

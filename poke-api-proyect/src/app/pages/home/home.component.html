@@ -1,0 +1,15 @@
+<main id="container">
+    <app-detalle></app-detalle>
+    <app-poke-foto
+    [pokemon]="pokeSelected"
+    >
+    </app-poke-foto>
+    <div id="containerCards" #tarjetas (scroll)="onScroll($event)">
+        <app-poke-tarjeta *ngFor="let pokemon of listaPokemons"
+        [data]="pokemon"
+        [seleccionado]="pokemon.name===pokeSelected?.name"
+        (clicked)="tarjetaClick($event)"
+        >
+        </app-poke-tarjeta>
+    </div>
+</main>

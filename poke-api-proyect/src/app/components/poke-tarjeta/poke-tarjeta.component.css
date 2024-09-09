@@ -1,0 +1,59 @@
+#container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    isolation: isolate;
+}
+
+#container.seleccionado::before {
+    position: absolute;
+    content: "";
+    width: calc(100% + 8px);
+    height: 120%;
+    left: 20px;
+    background-color: red;
+    z-index: -1;
+    border-radius: 5px;
+}
+
+
+#flecha{
+    height: 20px;
+    padding-left: 0 20px;
+    position: absolute;
+}
+
+#tarjeta{
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 25px 5px 5px 25px;
+    width: 90%;
+    font-size: large;
+    padding-left: 20px;
+    margin-left: 50px;
+    gap: 1rem;
+}
+
+#tarjeta.seleccionado::before {
+    position: absolute;
+    content: "";
+    width: calc(100% + 8px);
+    height: 120%;
+    left: 20px;
+    background-color: yellow;
+    z-index: -1;
+    border-radius: 5px;
+}
+
+#circle{
+    border-radius: 50%;
+    height: 25px;
+    aspect-ratio: 1;
+    background-color: rgb(104, 104, 104);
+}
+
+#pokeImg{
+    max-height: 50px;
+}

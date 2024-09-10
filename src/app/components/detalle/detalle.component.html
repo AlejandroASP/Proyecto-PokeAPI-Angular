@@ -1,7 +1,18 @@
+<div id="decorador"></div>
 <div id="container">
     <div id="idPoke">
-        <h1>No.1</h1>
-        <h1>Pepe</h1>
+        <span>No.{{pokemon?.id}}</span>
+        <span class="pokeName">{{pokemon?.name | titlecase}}</span>
+    </div>
+
+    <div id="type">
+        @if(pokemon?.types?.length){
+        <span *ngFor="let tipo of pokemon?.types">{{tipo.type.name | titlecase}}</span>
+        }
+        @else {
+        <span>Tipo</span>
+        }
+
     </div>
     <div class="grid-container">
         <div class="square"></div>
@@ -133,11 +144,17 @@
     </div>
 
     <div id="pokestats">
-        <div id="altura">
-            Altura
-        </div>
-        <div id="peso">
-            Peso
-        </div>
+        <p id="altura">
+            <span>Altura: </span>
+            {{pokemon?.height}}'
+        </p>
+        <p id="peso">
+            <span>Peso: </span>
+            {{pokemon?.weight}} lbs.
+        </p>
+        <p>
+            {{descripcion}}
+        </p>
     </div>
+
 </div>

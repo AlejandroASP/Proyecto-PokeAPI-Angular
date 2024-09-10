@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     isolation: isolate;
+    margin-top: 10px;
 }
 
 #container.seleccionado::before {
@@ -11,16 +12,8 @@
     width: calc(100% + 8px);
     height: 120%;
     left: 20px;
-    background-color: red;
     z-index: -1;
     border-radius: 5px;
-}
-
-
-#flecha{
-    height: 20px;
-    padding-left: 0 20px;
-    position: absolute;
 }
 
 #tarjeta{
@@ -28,7 +21,7 @@
     align-items: center;
     background-color: rgb(0, 0, 0);
     color: white;
-    border-radius: 25px 5px 5px 25px;
+    clip-path: polygon(2% 0, 100% 0, 95% 0, 90% 100%, 2% 100%, 0 50%);
     width: 90%;
     font-size: large;
     padding-left: 20px;
@@ -42,9 +35,13 @@
     width: calc(100% + 8px);
     height: 120%;
     left: 20px;
-    background-color: yellow;
+    background-color: rgba(110, 82, 4, 0.541);
     z-index: -1;
     border-radius: 5px;
+}
+
+#tarjeta.seleccionado{
+    color: yellow;
 }
 
 #circle{

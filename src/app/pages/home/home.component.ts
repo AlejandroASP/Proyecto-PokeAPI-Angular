@@ -8,7 +8,6 @@ import { Pokemon } from '../../interfaces/pokemon';
 import { DetalleComponent } from '../../components/detalle/detalle.component';
 
 
-
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -30,6 +29,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.cargarLista();
     this.pokemonService.getById("1");
+    // alert("¡AVISO! ESTA PÁGINA ESTÁ EN CONSTRUCCIÓN, ¡GRACIAS!")
   }
 
   async cargarLista(){

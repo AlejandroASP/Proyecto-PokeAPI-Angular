@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { Pokemon } from '../../interfaces/pokemon';
 import { CommonModule } from '@angular/common';
+import { PokemonService } from '../../services/pokemon.service';
 
 @Component({
   selector: 'app-poke-foto',
@@ -9,8 +10,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './poke-foto.component.html',
   styleUrl: './poke-foto.component.css'
 })
-export class PokeFotoComponent {
+export class PokeFotoComponent{
+  @Input() pokemon?: Pokemon; // Crear una instancia de tipo pokemon para obtener la foto
 
-  @Input() pokemon?:Pokemon; // Crear una instancia de tipo pokemon para obtener la foto
-  
 }

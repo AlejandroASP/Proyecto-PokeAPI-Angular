@@ -26,30 +26,11 @@ export class PokemonService {
     return await res.json();
   }
 
-  // async getPokemonFootprint(id: string): Promise<string | null> {
-  //   try {
-  //     // Realizamos la petición a la PokeAPI para obtener datos del Pokémon
-  //     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
-  //     const data = await response.json();
-
-  //     // Verificamos si existen sprites y específicamente la huella (si está disponible)
-  //     const footprintUrl = data.sprites?.versions?.['generation-v']?.['black-white']?.front_default ?? null;
-
-  //     if (footprintUrl) {
-  //       console.log(`Huella del Pokémon ${id}:`, footprintUrl);
-  //     } else {
-  //       console.log(`No se encontró huella para el Pokémon ${id}.`);
-  //     }
-
-  //     return footprintUrl;
-  //   } catch (error) {
-  //     console.error(`Error al obtener datos del Pokémon con ID ${id}:`, error);
-  //     return null;
-  //   }
-  // }
-
-  getDescripcion() {
-    fetch("https://pokeapi.co/api/v2/pokemon")
+  async getDescripcion(id: string | number):Promise<string>{
+    const res = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}`)
+    const resJson = await res.json();
+    const texto = resJson.flavor_text_entries.find((texto:any) =>  texto.language.name === "es")
+    return texto ? texto.flavor_text : "No se econtró descripción en español";
   }
 
 }

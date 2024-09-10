@@ -46,3 +46,23 @@
     height: 20px;
     background-color: rgba(82, 82, 82, 0.37);
 }
+
+#type{
+    border: solid;
+    position: absolute;
+    margin-top: 130px;
+    margin-left: 50px;
+    width: 8vw;
+    text-align: center;
+}
+#decorador{
+    border: solid;
+    background-color: black;
+    height: 20px;
+    width: 10vw;
+    margin-left: 540px;
+    clip-path: polygon(2% 0, 100% 0, 90% 0, 100% 100%, 0 100%, 0 0);
+}
+.pokeName{
+    margin-left: 2px;
+}

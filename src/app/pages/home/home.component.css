@@ -1,8 +1,9 @@
 #container{
-    height: calc(100vh - 110px);
+    height: calc(100vh - 103px);
     display: grid;
     grid-template-columns: 1.2fr 1fr;
     align-items: center;
+    background-color: rgb(150, 16, 16);
 }
 
 #containerCards{
@@ -15,7 +16,6 @@
     cursor: pointer;
     margin-right: 10px;
 }
-
 
 ::-webkit-scrollbar{
     width: 12px;

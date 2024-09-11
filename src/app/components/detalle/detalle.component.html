@@ -1,19 +1,21 @@
 <div id="decorador"></div>
 <div id="container">
     <div id="idPoke">
-        <span>No.{{pokemon?.id}}</span>
-        <span class="pokeName">{{pokemon?.name | titlecase}}</span>
+        <h1>
+            <span>No.{{pokemon?.id}}</span>
+            <span class="pokeName">{{pokemon?.name | titlecase}}</span>
+        </h1>
     </div>
 
     <div id="type">
-        @if(pokemon?.types?.length){
-        <span *ngFor="let tipo of pokemon?.types">{{tipo.type.name | titlecase}}</span>
-        }
-        @else {
-        <span>Tipo</span>
-        }
-
+        <ng-container>
+            <span class="textType">Tipo</span>
+            <span *ngFor="let tipo of pokemon?.types" [ngStyle]="{ 'background-color': getTypeColor(tipo.type.name)}">
+                {{ tipo.type.name | titlecase }}
+            </span>
+        </ng-container>
     </div>
+
     <div class="grid-container">
         <div class="square"></div>
         <div class="square"></div>
@@ -146,15 +148,26 @@
     <div id="pokestats">
         <p id="altura">
             <span>Altura: </span>
-            {{pokemon?.height}}'
+            {{pokemon?.height}}m
         </p>
         <p id="peso">
             <span>Peso: </span>
-            {{pokemon?.weight}} lbs.
+            {{pokemon?.weight}}kg.
         </p>
+    </div>
+    @if(descripcion != ""){
+    <div class="detalle">
         <p>
             {{descripcion}}
         </p>
     </div>
+    }
+    @else {
+    <div class="detalleNull">
+        <p>
+            Aqui va la descripción del pokemon
+        </p>
+    </div>
+    }
 
 </div>

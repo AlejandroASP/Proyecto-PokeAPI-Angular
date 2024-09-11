@@ -1,5 +1,5 @@
 header {
-    height: 100px;
+    height: 58px;
     background: black;
     display: flex;
     align-items: center;
@@ -9,19 +9,23 @@ header {
     border-top: 0;
     border-left: 0;
     border-right: 0;
+    color: white;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
-    gap: 10px;
-    width: 120%;
-    height: 7vh;
-    margin-top: -10px;
+footer{
+    position: absolute;
+    color: white;
+    background-color: black;
+    height: 39px;
+    width: 100%;
+    border:solid rgb(221, 221, 4);
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
 }
 
-.square {
-    width: 30px;
-    height: 30px;
-    background-color: rgba(82, 82, 82, 0.747);
+footer p{
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 8px;
 }
